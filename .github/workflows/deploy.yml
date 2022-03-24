@@ -1,8 +1,5 @@
 name: Deploy
 
-concurrency: production
-cancel-in-progress: true
-
 on:
   push:
     branches:
@@ -11,7 +8,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - uses: actions/checkout@v2
       - name: setup node
@@ -25,7 +21,6 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    environment: production
     needs: [test]
     steps:
       - uses: actions/checkout@v2
