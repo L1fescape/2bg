@@ -15,6 +15,7 @@ export const html = `
   </head>
   <body>
     <p>2bg.gg</p>
+    <p>hello world</p>
   </body>
 </html>
 `
