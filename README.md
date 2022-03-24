@@ -1,6 +1,6 @@
 # 2bg.gg
 
-> nice
+[![Deploy](https://github.com/L1fescape/2bg/actions/workflows/deploy.yml/badge.svg)](https://github.com/L1fescape/2bg/actions/workflows/deploy.yml)
 
 ## install
 
