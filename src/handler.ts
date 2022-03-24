@@ -14,8 +14,7 @@ export const html = `
   </style>
   </head>
   <body>
-    <p>2bggg</p>
-    <p>sweet</p>
+    <p>2bg.gg</p>
   </body>
 </html>
 `
