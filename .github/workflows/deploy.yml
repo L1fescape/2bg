@@ -9,9 +9,28 @@ on:
       - main
 
 jobs:
-  deploy:
+  test:
+    runs-on: ubuntu-latest
+    environment: production
     steps:
-      uses: cloudflare/wrangler-action@1.3.0
-      with:
-        apiToken: ${{ secrets.CF_API_TOKEN }}
-        environment: 'production'
+      - uses: actions/checkout@v2
+      - name: setup node
+        uses: actions/setup-node@v2
+        with: 
+          node-version: "14.18"
+      - name: install dependencies
+        run: npm install
+      - name: run tests
+        run: npm test
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    needs: [test]
+    steps:
+      - uses: actions/checkout@v2
+      - name: publish
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: 'production'
