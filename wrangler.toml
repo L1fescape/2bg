@@ -14,4 +14,4 @@ format = "service-worker"
 
 [env.production]
 # The route pattern your Workers application will be served at
-# route = "2bg.gg/*"
+route = "2bg.gg/*"

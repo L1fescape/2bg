@@ -14,7 +14,7 @@ const html = `
   </style>
   </head>
   <body>
-    2bg.gg
+    <p>2bggg</p>
   </body>
 </html>
 `
