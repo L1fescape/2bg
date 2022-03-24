@@ -1,0 +1,17 @@
+name = "gg"
+type = "webpack"
+zone_id = ""
+account_id = "3e87bdfc332255c042af7a23a4c6f759"
+route = ""
+workers_dev = true
+compatibility_date = "2022-03-24"
+
+[build]
+command = "npm install && npm run build"
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+# The route pattern your Workers application will be served at
+# route = "2bg.gg/*"
