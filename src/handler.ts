@@ -1,4 +1,4 @@
-const html = `
+export const html = `
 <!DOCTYPE html lang="en">
 <head>
   <title>2bg.gg</title>
