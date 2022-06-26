@@ -7,7 +7,7 @@ workers_dev = true
 compatibility_date = "2022-03-24"
 
 [site]
-bucket = "./public"
+bucket = "./dist/public"
 
 [dev]
 ip="0.0.0.0"
