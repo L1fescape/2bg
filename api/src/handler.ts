@@ -1,5 +1,5 @@
 const data = {
-  msg: 'good stuff'
+  msg: 'good stuff!'
 }
 const json = JSON.stringify(data, null, 2)
 
