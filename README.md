@@ -1,5 +1,7 @@
 # 2bg.gg
 
+> cloudflare worker and webapp for [2bg.gg](https://2bg.gg)
+
 [![Deploy](https://github.com/L1fescape/2bg/actions/workflows/deploy.yml/badge.svg)](https://github.com/L1fescape/2bg/actions/workflows/deploy.yml)
 
 ## install
@@ -16,3 +18,8 @@ $ npm install
 ```
 $ wrangler dev
 ```
+
+## deploy
+
+
+## devcontainer
