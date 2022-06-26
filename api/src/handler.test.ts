@@ -1,4 +1,4 @@
-import { handleRequest } from './handler'
+import { handleAPIRequest } from './handler'
 import makeServiceWorkerEnv from 'service-worker-mock'
 
 // eslint-disable-next-line
@@ -11,7 +11,7 @@ describe('handle', () => {
   })
 
   test('handle GET', async () => {
-    const result = await handleRequest(new Request('/', { method: 'GET' }))
+    const result = await handleAPIRequest(new Request('/', { method: 'GET' }))
     expect(result.status).toEqual(200)
   })
 })

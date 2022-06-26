@@ -8,12 +8,14 @@ services:
     env_file: .env
     user: "${UID}:${GID}"
     ports:
-      - "3000"
+      - "8080"
       - "8787"
     volumes:
       - ./:/workspace
-      - 2bg-node_modules:/workspace/node_modules
+      - 2bg-web-node_modules:/workspace/app/node_modules
+      - 2bg-api-node_modules:/workspace/api/node_modules
     command: sleep infinity
 
 volumes:
-  2bg-node_modules:
+  2bg-web-node_modules:
+  2bg-api-node_modules:

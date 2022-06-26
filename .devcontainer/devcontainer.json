@@ -5,13 +5,9 @@
   "dockerComposeFile": "../docker-compose.yml",
   "service": "dev",
   "extensions": [
+    "Vue.volar",
     "ms-vscode.vscode-typescript-tslint-plugin",
     "esbenp.prettier-vscode",
     "eamodio.tsl-problem-matcher"
-  ],
-  "mounts": [
-    "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind,consistency=cached",
-    "source=2bg-node-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
-    "source=2bg-dist,target=${containerWorkspaceFolder}/dist,type=volume"
   ]
 }

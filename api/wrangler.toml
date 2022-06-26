@@ -1,13 +1,13 @@
-name = "2bg-web"
+name = "2bg-api"
 type = "javascript"
 zone_id = ""
 account_id = "3e87bdfc332255c042af7a23a4c6f759"
-route = ""
 workers_dev = true
 compatibility_date = "2022-03-24"
 
 [dev]
 ip="0.0.0.0"
+port=8787
 
 [build]
 command = "npm install && npm run build"
@@ -17,4 +17,4 @@ format = "service-worker"
 
 [env.production]
 # The route pattern your Workers application will be served at
-route = "2bg.gg/*"
+route = "2bg.gg/api*"
