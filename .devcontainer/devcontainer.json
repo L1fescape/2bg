@@ -1,21 +1,17 @@
 {
   "name": "2bg.gg",
   "workspaceFolder": "/workspace",
-  "image": "node:14.18",
   "runArgs": ["-it"],
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "dev",
   "extensions": [
     "ms-vscode.vscode-typescript-tslint-plugin",
     "esbenp.prettier-vscode",
-    "msjsdiag.debugger-for-chrome",
     "eamodio.tsl-problem-matcher"
   ],
-  "settings": {
-    "firefox.args": []
-  },
-  "appPort": 8787,
   "mounts": [
     "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind,consistency=cached",
-    "source=try-node-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
-    "source=try-dist,target=${containerWorkspaceFolder}/dist,type=volume"
+    "source=2bg-node-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=2bg-dist,target=${containerWorkspaceFolder}/dist,type=volume"
   ]
 }

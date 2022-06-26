@@ -1,10 +1,18 @@
 const path = require('path')
+const CopyPlugin = require('copy-webpack-plugin')
+
+const root = __dirname
+const src = path.resolve(root, 'src')
+const dist = path.resolve(root, 'dist')
+const public = path.resolve(dist, 'public')
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: {
+    worker: path.resolve(src, 'worker', 'index.ts'),
+    'public/app': path.resolve(src, 'app'),
+  },
   output: {
-    filename: 'worker.js',
-    path: path.join(__dirname, 'dist'),
+    path: dist,
   },
   devtool: 'cheap-module-source-map',
   mode: 'development',
@@ -22,4 +30,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [{ from: path.resolve(src, 'static'), to: public }],
+    }),
+  ],
 }

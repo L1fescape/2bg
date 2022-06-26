@@ -1,7 +1,6 @@
-export const html = `
 <!DOCTYPE html lang="en">
 <head>
-  <title>2bg.gg</title>
+  <title>2bg</title>
   <style>
     html, body {
       background: #222;
@@ -14,16 +13,8 @@ export const html = `
   </style>
   </head>
   <body>
-    <p>2bg.gg</p>
+    <p>2bg</p>
     <p>hello world</p>
+    <script src="./app.js"></script>
   </body>
 </html>
-`
-
-export async function handleRequest(request: Request): Promise<Response> {
-  return new Response(html, {
-    headers: {
-      'content-type': 'text/html;charset=UTF-8',
-    },
-  })
-}

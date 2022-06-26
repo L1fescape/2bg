@@ -1,0 +1,19 @@
+version: "3"
+services:
+  dev:
+    container_name: 2bg.gg
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    user: "${UID}:${GID}"
+    ports:
+      - "3000"
+      - "8787"
+    volumes:
+      - ./:/workspace
+      - 2bg-node_modules:/workspace/node_modules
+    command: sleep infinity
+
+volumes:
+  2bg-node_modules:
