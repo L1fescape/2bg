@@ -13,7 +13,7 @@ bucket = "./public"
 ip="0.0.0.0"
 
 [build]
-command = "npm run build"
+command = "npm install && npm run build"
 
 [build.upload]
 format = "service-worker"
