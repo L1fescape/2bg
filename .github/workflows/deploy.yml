@@ -15,9 +15,9 @@ jobs:
         with: 
           node-version: "14.18"
       - name: install dependencies
-        run: npm install
+        run: cd api && npm install
       - name: run tests
-        run: npm test
+        run: cd api && npm test
 
   deploy:
     runs-on: ubuntu-latest
