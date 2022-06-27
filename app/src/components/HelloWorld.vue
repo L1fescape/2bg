@@ -1,7 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>{{ loading ? 'loading...' : data }}</p>
+    <p v-if="loading">loading...</p>
+    <p v-else-if="error">oh no there was an error: {{ error }}</p>
+    <p v-else-if="data">{{ data }}</p>
   </div>
 </template>
 
