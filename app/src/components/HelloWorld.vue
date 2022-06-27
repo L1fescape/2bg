@@ -19,7 +19,13 @@ export default {
   created() {
     this.loading = true
     getData()
-      .then(data => this.data = data.msg)
+      .then(data => {
+        if (data.error) {
+          this.error = data.error
+        } else {
+          this.data = data.msg
+        }
+      })
       .catch(err => this.error = err)
       .finally(() => this.loading = false)
   },
