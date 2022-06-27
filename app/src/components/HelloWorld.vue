@@ -1,9 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p v-if="loading">loading...</p>
-    <p v-else-if="error">oh no there was an error: {{ error }}</p>
-    <p v-else-if="data">{{ data }}</p>
+    <div class="api-status">
+      <p v-if="loading">loading...</p>
+      <p v-else-if="error">oh no there was an error: {{ error }}</p>
+      <p v-else-if="data">{{ data }}</p>
+    </div>
   </div>
 </template>
 
