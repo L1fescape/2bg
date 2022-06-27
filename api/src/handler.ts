@@ -4,7 +4,7 @@ const data = {
 const json = JSON.stringify(data, null, 2)
 
 export async function handleAPIRequest(request: Request): Promise<Response> {
-  if (Math.floor(Math.random() * 100) < 25) {
+  if (Math.floor(Math.random() * 100) < 50) {
     return new Response('it failed!', {
       status: 400
     })
